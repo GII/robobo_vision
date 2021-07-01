@@ -31,7 +31,7 @@ def test_red(clf_red, image):
 
     return predict, class_prob
 
-#search and crop the image
+#search, crop and classify blue signals
 def identify_blue(imag, clf_blue):
     label_list = list()
     cnts_list = list()
@@ -147,7 +147,7 @@ def identify_blue(imag, clf_blue):
     else:
         return None, None
 
-#search and crop the image
+#search, crop and classify red signals
 def identify_red(imag, clf_red):
     label_list = list()
     cnts_list = list()
@@ -263,7 +263,7 @@ def identify_red(imag, clf_red):
 
 def main():
 
-    #connect Robobo camera and choose velocity
+    #connect Robobo camera and adjust velocity
     print("Starting test app")
     rob.connect()
     video = RoboboVideo(IP)
@@ -287,10 +287,15 @@ def main():
         #print("tiemo en procesar", fin - inicio)
         print("Labels (red):", label_red_list)
         print("Labels (blue):", label_blue_list)
-        #time.sleep(0.1) adjust frames per second
+        #adjust frames per second
+        #time.sleep(0.1)
+        cv2.imshow('ope', imag)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
     rob.stopMotors()
     rob.stopStream()
     video.disconnect()
+
 
 """
 MAIN PROGRAM

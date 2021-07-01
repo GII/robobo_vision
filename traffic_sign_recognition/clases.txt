@@ -1,0 +1,24 @@
+	ROJO
+0.	Curva peligrosa hacia la izquierda
+1.	Curva peligrosa hacia la derecha
+2.	Cuidado paso de peatones
+3.	Obras
+4.	Semáforo
+5.	Intersección
+6.	Ceda
+7.	Stop
+8.	Entrada prohibida
+9.	Giro a la izquierda prohibido
+10.	Giro a la derecha prohibido
+11.	Velocidad máxima: 20 km/h
+12.	Velocidad máxima: 30 km/h
+13.	Velocidad máxima: 50 km/h
+AZUL
+14.	Sentido obligatorio recto
+15.	Sentido obligatorio derecha
+16.	Sentido obligatorio izquierda
+17.	Sentido obligatorio curva derecha
+18.	Sentido obligatorio curva izquierda
+19.	Rotonda
+20.	Zona de estacionamiento
+21.	Paso de peatones
